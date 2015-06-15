@@ -1,0 +1,31 @@
+Ext.define('Chat.view.chat.TastieraChat' ,{
+    extend: 'Ext.panel.Panel',
+    alias: 'widget.tastieraChat',
+    autoShow: true,
+    title: 'Scrivi qui...',
+    collapsible: true,
+    collapseDirection :'bottom',
+    split: true,
+
+    initComponent: function() {
+        this.tbar= [
+            {
+                xtype     : 'textareafield',
+                grow      : true,
+                name      : 'message',
+                fieldLabel: 'Messaggio',
+                anchor    : '100%',
+                padding:10,
+                width: 1000
+            },
+
+            {
+                xtype: 'button',
+                text: 'Invia',
+                action: 'invia'
+            }
+            ];
+
+        this.callParent(arguments);
+    }
+});
